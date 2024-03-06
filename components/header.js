@@ -155,7 +155,7 @@ export default function Header() {
               ref={menuRef}
               className="bg-gray-100 absolute top-[66px] right-0 min-w-[200px]"
             >
-              <div className="mx-auto max-w-screen-xl px-4 lg:px-6 py-2.5">
+              {/* <div className="mx-auto max-w-screen-xl px-4 lg:px-6 py-2.5">
                 <ul
                   className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0 text-center"
                   id="btn-wrap"
@@ -233,7 +233,7 @@ export default function Header() {
                     </>
                   )}
                 </div>
-              </div>
+              </div> */}
             </div>
           )}
         </div>

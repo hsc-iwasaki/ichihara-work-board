@@ -18,12 +18,12 @@ export default function Footer() {
           <NextLink className="hover:border-b" href="/privacy">
             プライバシーポリシー
           </NextLink>
-          <NextLink className="hover:border-b" href="/">
+          {/* <NextLink className="hover:border-b" href="/">
             お問い合わせ
-          </NextLink>
-          <NextLink className="hover:border-b" href="/auth/login">
+          </NextLink> */}
+          {/* <NextLink className="hover:border-b" href="/auth/login">
             ログイン
-          </NextLink>
+          </NextLink> */}
         </nav>
       </footer>
     </>

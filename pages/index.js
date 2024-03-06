@@ -360,19 +360,21 @@ export default function Home({ data }) {
             ref={contentRef}
           >
             {selectedData.length === 0 ? (
-              <p>求人情報はまだありません</p>
+              <center>
+                <p>準備中です</p>
+              </center>
             ) : (
               <CardCompornent job={selectedData.slice(0, 3)} />
             )}
           </div>
-          <div className="flex justify-center sm:my-20 my-10">
+          {/* <div className="flex justify-center sm:my-20 my-10">
             <NextLink
               className="sm:text-lg text-sm w-64 text-center bg-green-500 text-white rounded-full py-4 hover:text-green-500 hover:bg-white border border-green-500"
               href="/discover/1"
             >
               求人一覧へ
             </NextLink>
-          </div>
+          </div> */}
         </div>
         <div className="mt-52">
           <h3 className="pb-10 sm:text-2xl text-base text-center font-bold">
@@ -394,19 +396,21 @@ export default function Home({ data }) {
           </div>
           <div className="min-h-[413px] flex justify-center items-center fade-group industry-list">
             {selectedData2.length === 0 ? (
-              <p>求人情報はまだありません</p>
+              <center>
+                <p>準備中です</p>
+              </center>
             ) : (
               <CardCompornent job={selectedData2.slice(0, 3)} />
             )}
           </div>
-          <div className="flex justify-center sm:my-20 my-10">
+          {/* <div className="flex justify-center sm:my-20 my-10">
             <NextLink
               className="sm:text-lg text-sm w-64 text-center bg-green-500 text-white rounded-full py-4 hover:text-green-500 hover:bg-white border border-green-500"
               href="/discover/1"
             >
               求人一覧へ
             </NextLink>
-          </div>
+          </div> */}
         </div>
       </section>
     </>
