@@ -9,21 +9,21 @@ import CardCompornent from "@/components/card";
 import NextLink from "next/link";
 import { Box, Flex, Image, Text } from "@chakra-ui/react";
 
-export const getServerSideProps = async () => {
-  try {
-    const response = await fetch(
-      `${process.env.NEXT_PUBLIC_BASE_URL}/api/getJobListAll`
-    );
-    if (!response.ok) {
-      throw new Error("Network response was not ok");
-    }
-    const data = await response.json();
-    return { props: { data } };
-  } catch (error) {
-    console.error("Error fetching job list:", error);
-    return { notFound: true };
-  }
-};
+// export const getServerSideProps = async () => {
+//   try {
+//     const response = await fetch(
+//       `${process.env.NEXT_PUBLIC_BASE_URL}/api/getJobListAll`
+//     );
+//     if (!response.ok) {
+//       throw new Error("Network response was not ok");
+//     }
+//     const data = await response.json();
+//     return { props: { data } };
+//   } catch (error) {
+//     console.error("Error fetching job list:", error);
+//     return { notFound: true };
+//   }
+// };
 
 function Model() {
   const gltf = useGLTF("/glb/ichihara.glb");
@@ -58,20 +58,20 @@ export default function Home({ data }) {
   const contentRef = useRef(null);
   // 最初のマウント時にデータをフェッチ
   useEffect(() => {
-    async function fetchData() {
-      const initialData = data.filter((item) => item.region === "Ichihara");
-      const initialData2 = data.filter(
-        (item) => item.industry === "Construction"
-      );
-      const pickUp = data.filter((item) => item.picked === true);
-      setPickUpData(pickUp);
-      setSelectedData(initialData);
-      setSelectedData2(initialData2);
-      setMainData(data);
-    }
+    // async function fetchData() {
+    //   const initialData = data.filter((item) => item.region === "Ichihara");
+    //   const initialData2 = data.filter(
+    //     (item) => item.industry === "Construction"
+    //   );
+    //   const pickUp = data.filter((item) => item.picked === true);
+    //   setPickUpData(pickUp);
+    //   setSelectedData(initialData);
+    //   setSelectedData2(initialData2);
+    //   setMainData(data);
+    // }
     const init = async () => {
       // データのフェッチを待ちます
-      await fetchData();
+      // await fetchData();
       // スクロールアニメーションの設定
       const lines = document.querySelectorAll(".line");
       let currentLine = 0;
@@ -257,8 +257,8 @@ export default function Home({ data }) {
           </div>
         </div>
       </section>
-      <section>
-        <div className="sm:mt-96 mt-64">
+      <section className="lg:mt-80 mt-64">
+        {/* <div className="sm:mt-96 mt-64">
           <h2 className="text-center font-bold sm:pb-56 pb-40 md:text-6xl text-5xl fade-group">
             求人情報
           </h2>
@@ -336,7 +336,7 @@ export default function Home({ data }) {
               求人一覧へ
             </NextLink>
           </div>
-        </div>
+        </div> */}
         <div>
           <h3 className="pb-10 sm:text-2xl text-base text-center font-bold">
             地域から探す
